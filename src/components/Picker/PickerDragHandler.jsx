@@ -355,6 +355,14 @@ class PickerDragHandler extends React.PureComponent {
     }
   }
 
+  renderTime() {
+    const { time } = this.props;
+    if (this.props.type === 'hour') {
+      return time === 0 ? 12 : time;
+    }
+    return time;
+  }
+
   render() {
     const { time, draggable } = this.props;
     const { draging, height, top, pointerRotate } = this.state;
@@ -375,7 +383,7 @@ class PickerDragHandler extends React.PureComponent {
             onMouseDown={draggable ? this.handleMouseDown : Function.prototype}
             onTouchStart={draggable ? this.handleMouseDown : Function.prototype}
           >
-            {time}
+            {this.renderTime()}
           </div>
         </div>
         <div

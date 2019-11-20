@@ -204,6 +204,7 @@ class TwentyFourHoursMode extends React.PureComponent {
             ref={ref => (this.pickerPointerContainer = ref)}
             handleTimePointerClick={this.handleTimePointerClick}
             pointerRotate={pointerRotate}
+            type
           />
           <PickerDragHandler
             step={step}

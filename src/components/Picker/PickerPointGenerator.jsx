@@ -47,7 +47,7 @@ const pickerPointGenerator = (type = 'hour', mode = 24) =>
           <PickerPoint
             key={index}
             angle={angle}
-            index={index}
+            index={index === 0 ? 12 : index}
             pointClass={pointClass}
             pointerRotate={this.props.pointerRotate}
             onClick={this.props.handleTimePointerClick}
